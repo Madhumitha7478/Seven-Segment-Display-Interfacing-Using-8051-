@@ -42,8 +42,41 @@ o	Power (VCC & GND) and appropriate resistors.
 
 ## Program:
 
+ORG 0000H
+	UP: MOV P2, #0C0H
+	ACALL DELAY
+	MOV P2, #0F9H
+	ACALL DELAY
+	MOV P2, #0A4H
+	ACALL DELAY
+	MOV P2, #0B0H
+	ACALL DELAY
+	MOV P2, # 99H
+	ACALL DELAY
+	MOV P2, # 92H
+	ACALL DELAY
+	MOV P2, # 82H
+	ACALL DELAY
+	MOV P2, #0F8H
+	ACALL DELAY
+	MOV P2, #80H 
+	ACALL DELAY
+	MOV P2, #90H
+	ACALL DELAY
+
+
+DELAY: MOV R5, #10
+	H1: MOV R4, #180
+	H2: MOV R3, #255
+	H3:DJNZ R3,H3
+	DJNZ R4,H2
+	DJNZ R5,H1
+	RET
+	END
 
 ## Output:
+<img width="1784" height="1088" alt="image" src="https://github.com/user-attachments/assets/ae146635-c952-485b-baad-3b746443eeb0" />
+
 
 
 ## Result:
