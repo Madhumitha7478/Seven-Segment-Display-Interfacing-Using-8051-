@@ -42,6 +42,7 @@ o	Power (VCC & GND) and appropriate resistors.
 
 ## Program:
 
+```
 ORG 0000H
 	UP: MOV P2, #0C0H
 	ACALL DELAY
@@ -74,6 +75,7 @@ DELAY: MOV R5, #10
 	RET
 	END
 
+```
 ## Output:
 <img width="1784" height="1088" alt="image" src="https://github.com/user-attachments/assets/ae146635-c952-485b-baad-3b746443eeb0" />
 
